@@ -6,10 +6,14 @@ import java.util.Random;
 
 public class Population {
   private Organism[] organism;
+  private Point[] orgToPoint;
+  private int[][] pointToOrg;
+  private int height;
+  private int width;
   
-  public Population(Pair<String, Integer>[] counts) throws IllegalArgumentException {
+  public Population(Pair<String, Integer>[] counts, int height, int width) throws IllegalArgumentException {
+    /* Convert Pair into organism[] */
     LinkedList<Organism> list = new LinkedList<>();
-
     for (Pair<String, Integer> pair : counts) {
       for (int i = 0; i < pair.right; i++) {
         if (pair.left.equals("Cooperator")) {
@@ -23,8 +27,20 @@ public class Population {
         }
       }
     }
-        
-    organism = (Organism[]) list.toArray();
+    organism = list.toArray(new Organism[list.size()]);
+
+    /* establish org->point and point->org mapping */
+    this.height = height;
+    this.width = width;
+    orgToPoint = new Point[height * width];
+    pointToOrg = new int[height][width];
+    /* intialize pointToOrg */
+    for (int h = 0; h < pointToOrg.length; h++)
+      for (int w = 0; w < pointToOrg[0].length; w++) {
+        pointToOrg[h][w] = -1;
+      }
+    /* insert org into grid in order */
+    for (int x = 0; x < )
   }
   
   public void update() {
@@ -45,7 +61,7 @@ public class Population {
       
       /* check reproduce */
       if (organism[i].getEnergy() >= 10) {
-        int organismToReplace = rand.nextInt(organism.length + 1);
+        int organismToReplace = rand.nextInt(organism.length);
         organism[organismToReplace] = organism[i].reproduce();
       }
     }
@@ -74,7 +90,7 @@ public class Population {
     }
     
     /* generate pair array */
-    Pair<String, Integer>[] orgPair = (Pair<String, Integer>[]) new Object[dic.keySet().size()];
+    Pair<String, Integer>[] orgPair = (Pair<String, Integer>[]) new Pair[dic.keySet().size()];
     int index = 0;
     for (String name : dic.keySet()) {
       Integer num = dic.get(name);
@@ -90,9 +106,9 @@ public class Population {
     Random rand = new Random();
     
     for (int i = 0; i < num; i++) {
-      int randInt = rand.nextInt(scope + 1);
+      int randInt = rand.nextInt(scope);
       while (contains(randArray, randInt) || randInt == except) {
-        randInt = rand.nextInt(scope + 1);
+        randInt = rand.nextInt(scope);
       }
       randArray[i] = randInt;
     }
