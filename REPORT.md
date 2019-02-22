@@ -1,4 +1,4 @@
-###Combination: size 10, 1 cooperator and rest defector
+### Combination: size 10, 1 cooperator and rest defector
 
 Same outcome for 10 trial:
 
@@ -10,7 +10,7 @@ PartialCooperator = 0
 Mean Cooperation Probability = 0.0
 
 
-###Combination: size 10, 1 defector and rest cooperator
+### Combination: size 10, 1 defector and rest cooperator
 
 After 100 ticks:
 Cooperator = 10
@@ -83,7 +83,7 @@ PartialCooperator = 0
 Mean Cooperation Probability = 1.0
 
 
-###Combination: size 10, 3 cooperator, 3 defector. 4 partial cooperator
+### Combination: size 10, 3 cooperator, 3 defector. 4 partial cooperator
 
 After 100 ticks:
 Cooperator = 0
@@ -167,7 +167,7 @@ PartialCooperator = 0
 Mean Cooperation Probability = 0.0
 
 
-###Combination: size 100, 1 defector and rest cooperator
+### Combination: size 100, 1 defector and rest cooperator
 
 Same outcome for 10 trial:
 
@@ -179,7 +179,7 @@ PartialCooperator = 0
 Mean Cooperation Probability = 1.0
 
 
-###Combination: size 100, 33 cooperator, 33 defector, 34 partial cooperator
+### Combination: size 100, 33 cooperator, 33 defector, 34 partial cooperator
 
 After 100 ticks:
 Cooperator = 0
@@ -275,7 +275,7 @@ Combination: size 100, 33 cooperator, 33 defector, 34 partial cooperator
 Average Cooperation Probability: 0.0145
 
 
-###Prediction and Result
+### Prediction and Result
 
 Combination: size 10, 1 cooperator and rest defector:
 
@@ -322,7 +322,7 @@ we had a reasonable guess that the defectors will dominate. This experiment also
 outcomes where the defectors dominated, but we had one instance where the results
 were a mix of defectors and partial cooperators. 
 
-###Summary
+### Summary
 
 It appears that even a small number of defectors introduced in the system can cause the population
 to gravitate towards defecting. However, with an overwhelming number of cooperators, it appears
