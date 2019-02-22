@@ -12,7 +12,7 @@ public class ALifeSim {
     pairs[1] = new Pair<String, Integer>("Defector", numOfDefector);
     pairs[2] = new Pair<String, Integer>("PartialCooperator", numOfPartial);
     
-    Population p = new Population(pairs);
+    Population p = new Population(pairs, 10, 10);
     for (int i = 0; i < iteration; i++) {
       p.update();
     }

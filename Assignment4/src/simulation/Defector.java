@@ -12,6 +12,7 @@ public class Defector extends Organism {
 
   @Override
   public Organism reproduce() {
+    this.energy = 0;
     return new Defector();
   }
 

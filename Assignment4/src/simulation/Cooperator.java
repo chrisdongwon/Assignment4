@@ -12,6 +12,7 @@ public class Cooperator extends Organism {
 
   @Override
   public Organism reproduce() {
+    this.energy = 0;
     return new Cooperator();
   }
 
