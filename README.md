@@ -4,6 +4,4 @@
 <p> Authors: Zixuan Guo, Chris Won <p\>
 
 ### How to Start
-'''Java
 java LifeSimVisualizer <iteration> <#cooperator> <#defector> <#partial cooperator> <height> <width>
-'''
