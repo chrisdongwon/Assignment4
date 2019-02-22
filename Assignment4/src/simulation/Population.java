@@ -58,9 +58,9 @@ public class Population {
   public void update() {
     Random rand = new Random();
     for (int i = 0; i < size; i++) {
-      System.out.println("Organism Location: [" + orgToPoint[i].getX() + ", " + orgToPoint[i].getY() + "]");
-      System.out.println("Name: " + organism[i].getType());
-      System.out.println("Energy Level: " + organism[i].getEnergy());
+//      System.out.println("Organism Location: [" + orgToPoint[i].getX() + ", " + orgToPoint[i].getY() + "]");
+//      System.out.println("Name: " + organism[i].getType());
+//      System.out.println("Energy Level: " + organism[i].getEnergy());
       /* update all of the organism */
       organism[i].update();
 
@@ -130,12 +130,12 @@ public class Population {
               }
             }
 
-        System.out.println("Point with least energy: " + pointWithLeastEnergy.toString());
+//        System.out.println("Point with least energy: " + pointWithLeastEnergy.toString());
         /* replace the point with least energy */
         if (!emptyPoint.isEmpty()) {
           Point newOrg = emptyPoint.remove(rand.nextInt(emptyPoint.size()));
-          System.out.println("number of empty point: " + emptyPoint.size());
-          System.out.println("reproduce at: " + newOrg.toString());
+//          System.out.println("number of empty point: " + emptyPoint.size());
+//          System.out.println("reproduce at: " + newOrg.toString());
           organism[size] = organism[i].reproduce();
           orgToPoint[size] = newOrg;
           pointToOrg[newOrg.getX()][newOrg.getY()] = size;
