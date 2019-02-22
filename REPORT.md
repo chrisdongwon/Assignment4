@@ -328,3 +328,17 @@ It appears that even a small number of defectors introduced in the system can ca
 to gravitate towards defecting. However, with an overwhelming number of cooperators, it appears
 that the system remains cooperative (i.e. average cooperation rate remains high)
 even after 100 iterations. 
+
+### Analysis on Bonus
+
+#### Selective replacement
+The organism will now replace the surrounding organism with lowest energy level, which make cooperator least advantageous because they usually have least energy level due to cooperation.
+
+### Location sensitivity
+Now the organism can form a group together and spacing is more important for organism because they cannot randomly replace another organism remotely
+
+### Visual display
+Nothing to say. just run the program and you will see
+
+### Add mutation
+Add more random into the game.

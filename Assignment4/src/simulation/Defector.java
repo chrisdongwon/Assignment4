@@ -1,5 +1,7 @@
 package simulation;
 
+import java.util.Random;
+
 public class Defector extends Organism {
   public Defector() {
     super();
@@ -13,6 +15,9 @@ public class Defector extends Organism {
   @Override
   public Organism reproduce() {
     this.energy = 0;
+    Random rand = new Random();
+    if (rand.nextDouble() < 0.05)
+      return rand.nextBoolean() ? new Cooperator() : new PartialCooperator();
     return new Defector();
   }
 

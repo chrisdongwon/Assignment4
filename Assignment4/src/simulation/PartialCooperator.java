@@ -17,6 +17,9 @@ public class PartialCooperator extends Organism {
   @Override
   public Organism reproduce() {
     this.energy = 0;
+    Random rand = new Random();
+    if (rand.nextDouble() < 0.05)
+      return rand.nextBoolean() ? new Cooperator() : new Defector();
     return new PartialCooperator();
   }
 
